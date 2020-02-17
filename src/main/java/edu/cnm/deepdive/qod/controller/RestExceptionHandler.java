@@ -13,4 +13,8 @@ public class RestExceptionHandler {
   @ResponseStatus(HttpStatus.NOT_FOUND)
   public void notFound() {}
 
+  @ExceptionHandler(IllegalArgumentException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
+  public void badRequest() {}
+
 }
